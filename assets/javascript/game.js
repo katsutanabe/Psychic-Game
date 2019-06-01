@@ -1,5 +1,4 @@
 
-    
     var wins = 0;
     var losses = 0;
     var guesses = 9;
@@ -42,7 +41,7 @@
         reWriteStats();
         letteranswerPrint();
         }
-        if(guesses <= 1){
+        if (guesses <= 1){
         losses++;
         guesses=9;
         letteranswerPrint();
