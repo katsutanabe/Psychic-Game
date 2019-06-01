@@ -6,39 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
 </head>
-<body>
+<body onload="letteranswer()">
     <h1>Guess what letter I'm thinking of </h1>
-    <script type="text/javascript">
-    var wins = 0;
-    var losses = 0;
-    var guesses = 9;
-    var result = '';
-    var characters = 'abcdefghijklmnopqrstuvwxyz';
-    var charactersLength = characters.lenght;
 
-    function reWriteStats(){
-        console.log("Wins: " + wins);
-        console.log("Losses: " + losses);
-        console.log("Guesses:" + guesses);
-    }
-
-    function letteranswer(lenght) {
-        for (var i = 0; i <lenght; i++) {
-            result = characters.chartAt(Math.floor(Math.random() * charactersLength))
-        }
-        return result;
-    }
-  console.log(letteranswer(1));
-
-  document.getElementById("Wins").innerHtml = "Wins:" + wins;
-  document.getElementById("Losses").innerHtml = "Losses" + losses;
-  document.getElementById("Guesses").innerHTML = "Guesses" + guesses;
-
-    document.onkeyup = function(event) {
-         var letter = event.key.toLowerCase();
-         
-    }
-
-    </script>
+    <h3 id="Wins"> Wins </h3>
+    <h3 id="Losses"> Losses </h3>
+    <h3 id="Guesses"> Guesses </h3>
+    <h3 id="Result"> Result </h3>
+ 
+    <script type= "text/javascript" src="../assets/javascript/game.js"></script>
 </body>
 </html>
